@@ -1,0 +1,10 @@
+version: '3'
+services:
+  elastic:
+    build: elasticsearch
+  apache:
+    build: apache
+    ports:
+      - "443:443"
+    volumes:
+      - ./logs:/usr/local/apache2/logs
