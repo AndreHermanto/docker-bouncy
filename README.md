@@ -6,6 +6,11 @@ with indexes built from ensembl data. The indexes are built with [shusson/genese
 
 ### Usage
 
+Add SSL files to `apache/ssl`, apache is configured for:
+  - org.crt
+  - org.key
+  - org.pem
+
 ```bash
 docker-compose up -d
 ```
