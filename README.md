@@ -18,6 +18,7 @@ Add SSL files to `apache/ssl`, apache is configured for:
   - org.crt
   - org.key
   - org.pem
+  - org-ca.pem
 
 ```bash
 docker-compose up -d
