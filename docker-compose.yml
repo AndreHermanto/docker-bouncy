@@ -6,6 +6,8 @@ services:
       nofile:
         soft: 65536
         hard: 65536
+    environment:
+      - ES_JAVA_OPTS=-Xms500m -Xmx500m
   apache:
     build: apache
     ports:
