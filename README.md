@@ -39,3 +39,10 @@ curl -XGET 'https://localhost/_elasticsearch/_search?pretty' -d'
 ```
 
 Apache logs will be written to `logs` directory
+
+### Note
+Elastic search may require extra setup on certain VMs
+
+```bash
+sudo sysctl -w vm.max_map_count=262144
+```
