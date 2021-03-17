@@ -1,16 +1,30 @@
 version: '2'
 services:
-  elastic:
-    build: elasticsearch
+  elastic-37:
+    build: elasticsearch-37
     ulimits:
       nofile:
         soft: 65536
         hard: 65536
     environment:
       - ES_JAVA_OPTS=-Xms500m -Xmx500m
-  apache:
-    build: apache
+  elastic-38:
+    build: elasticsearch-38
+    ulimits:
+      nofile:
+        soft: 65536
+        hard: 65536
+    environment:
+      - ES_JAVA_OPTS=-Xms500m -Xmx500m
+  apache-37:
+    build: apache-37
     ports:
       - "443:443"
+    volumes:
+      - ./logs:/usr/local/apache2/logs
+  apache-38:
+    build: apache-38
+    ports:
+      - "9500:443"
     volumes:
       - ./logs:/usr/local/apache2/logs
